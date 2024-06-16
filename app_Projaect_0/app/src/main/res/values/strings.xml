@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">app_Project_0</string>
     <string name="greeting">Hello World!</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="click_img_to_reset_count">Click img to reset count</string>
 
 </resources>
