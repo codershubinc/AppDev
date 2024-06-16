@@ -8,7 +8,7 @@ android {
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.app_projaect_0"
+        applicationId = "com.example.app_project_0"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -44,5 +44,12 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-    implementation("io.coil-kt:coil:2.6.0")
+    implementation(libs.coil)
+    implementation(libs.coil.svg)
+}
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
 }
