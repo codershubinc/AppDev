@@ -1,3 +1,4 @@
+// App module build.gradle.kts
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -46,10 +47,5 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     implementation(libs.coil)
     implementation(libs.coil.svg)
-}
-allprojects {
-    repositories {
-        google()
-        mavenCentral()
-    }
+    implementation("io.coil-kt:coil:1.3.2")
 }

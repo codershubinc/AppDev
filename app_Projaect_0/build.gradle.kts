@@ -1,15 +1,14 @@
-buildscript {
-    dependencies {
-        classpath(libs.kotlin.gradle.plugin)
-    }
+// Root build.gradle.kts
+plugins {
+    // Do not include the com.android.application plugin here
+    alias(libs.plugins.kotlin.android) apply false
+    alias(libs.plugins.android.application) apply false
 }
+
 allprojects {
     repositories {
-        google()
-        mavenCentral()
+// mavenCentral()
+        //        google()
+    //    mavenCentral()
     }
 }
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
-
-// Coil
- // implementation("io.coil-kt:coil-compose:2.4.0")

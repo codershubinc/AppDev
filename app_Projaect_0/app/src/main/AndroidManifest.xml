@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:versionCode="0"
+    android:versionName="zero">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -14,7 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.App_Projaect_0"
         tools:targetApi="31">
-
+        <activity
+            android:name=".MainActivity2"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

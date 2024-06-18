@@ -2,6 +2,7 @@ package com.example.app_projaect_0
 
 import android.annotation.SuppressLint
 import android.content.Intent
+import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
@@ -104,7 +105,9 @@ class MainActivity : AppCompatActivity() {
             imageLoader.enqueue(request)
         }
       */
+
     private fun loadSvgImage(imageView: ImageView, url: String, progressBar: ProgressBar) {
+
         val imageLoader = ImageLoader.Builder(applicationContext)
             .components {
                 add(SvgDecoder.Factory())
@@ -115,7 +118,9 @@ class MainActivity : AppCompatActivity() {
             .data(url)
             .target(
                 onStart = {
+                    imageView.setImageDrawable(Drawable.createFromPath("@android:drawable/ic_menu_report_image"))
                     progressBar.visibility = View.VISIBLE
+
                 },
                 onSuccess = { result ->
                     imageView.setImageDrawable(result)
@@ -164,7 +169,7 @@ class MainActivity : AppCompatActivity() {
 
     // open anather intent
     fun openAnatherIntent(view: View) {
-   //     val intent = Intent(this, MainActivity2::class.java)
-    //    startActivity(intent)
+       val intent = Intent(this, MainActivity2::class.java)
+        startActivity(intent)
     }
 }
